@@ -6,7 +6,7 @@
  */
 
 var store = module.exports = require('eventflow')();
-var RelationModel = require('./../mongoose_model.js');
+var RelationModel = require('./../models/mongoose_model.js');
 
 store.on('init', function (options, cb) {
     cb();
