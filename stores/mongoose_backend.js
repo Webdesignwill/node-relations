@@ -37,7 +37,6 @@ store.on('revocation', function (cmd, cb) {
 });
 
 store.on('verb-question', function (cmd, cb) {
-    console.log('verb-question');
     RelationModel.findOne({
         context: cmd.ctx.name,
         subject: cmd.subject,
@@ -60,7 +59,6 @@ store.on('verb-question', function (cmd, cb) {
 });
 
 store.on('role-question', function (cmd, cb) {
-    console.log('role-question');
     RelationModel.findOne({
         context: cmd.ctx.name,
         subject: cmd.subject,
@@ -85,7 +83,6 @@ store.on('role-question', function (cmd, cb) {
 });
 
 store.on('verb-request', function (cmd, cb) {
-    console.log('verb-request');
     RelationModel.find({
         context: cmd.ctx.name,
         subject: cmd.subject,
@@ -99,7 +96,6 @@ store.on('verb-request', function (cmd, cb) {
 });
 
 store.on('role-request', function (cmd, cb) {
-    console.log('role-request');
     RelationModel.find({
         context: cmd.ctx.name,
         subject: cmd.subject,
@@ -113,7 +109,6 @@ store.on('role-request', function (cmd, cb) {
 });
 
 store.on('verb-subject-request', function (cmd, cb) {
-    console.log('verb-subject-request');
     RelationModel.find({
         context: cmd.ctx.name,
         object: cmd.object,
@@ -126,7 +121,6 @@ store.on('verb-subject-request', function (cmd, cb) {
 });
 
 store.on('role-subject-request', function (cmd, cb) {
-    console.log('role-subject-request');
     RelationModel.find({
         context: cmd.ctx.name,
         object: cmd.object,
@@ -139,7 +133,6 @@ store.on('role-subject-request', function (cmd, cb) {
 });
 
 store.on('object-verb-request', function (cmd, cb) {
-    console.log('object-verb-request');
     RelationModel.find({
         context: cmd.ctx.name,
         object: cmd.object,
@@ -155,7 +148,6 @@ store.on('object-verb-request', function (cmd, cb) {
 
 // TODO
 store.on('object-role-map-request', function (cmd, cb) {
-    console.log('object-role-map-request');
   // var subject = initSubject(cmd);
   // var map = {};
   // map[''] = Object.keys(subject.roles || {}).filter(function (role) {
@@ -171,7 +163,6 @@ store.on('object-role-map-request', function (cmd, cb) {
 });
 
 store.on('subject-role-map-request', function (cmd, cb) {
-    console.log('subject-role-map-request');
   // var subjects = Object.keys(contexts[cmd.ctx.name] || {});
   // cb(null, subjects.reduce(function (map, subjectName) {
   //   var subject = initSubject({ subject: subjectName, ctx: cmd.ctx })
